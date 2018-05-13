@@ -20,5 +20,6 @@ from tutorial import views
 urlpatterns = [
     url(r'^$', views.login_redirect, name='login_redirect'),
     url(r'^admin/', admin.site.urls),
-    url(r'^account/', include('accounts.urls'))
+    url(r'^account/', include('accounts.urls')),
+    url(r'^google2556ce291aa8e634.html/$', views.google, name='google_registration')
 ]

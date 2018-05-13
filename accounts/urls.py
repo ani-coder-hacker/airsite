@@ -9,5 +9,4 @@ urlpatterns = [
     url(r'^register/$', views.register, name='register'),
     url(r'^profile/$', views.view_profile, name='view_profile'),
     url(r'^profile/edit/$', views.edit_profile, name='edit_profile'),
-    url(r'^google2556ce291aa8e634.html/$', views.google, name='google_registration'),
 ]
