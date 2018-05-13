@@ -25,7 +25,7 @@ SECRET_KEY = '-6!=b%domc0zu0ec-0f$x(sx6xorvz7i(eey!q66-8kee7#$p7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['airsite.pythonanywhere.com']
+ALLOWED_HOSTS = ['airsite.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition

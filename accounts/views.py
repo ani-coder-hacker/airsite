@@ -6,6 +6,9 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
+def google(request):
+    return render(request, 'accounts/google2556ce291aa8e634.html')
+
 def home(request):
     return render(request, 'accounts/home.html')
 
