@@ -15,6 +15,10 @@ class RegistrationForm(UserCreationForm):
         'password2'
         }
 
+    def __init__(self, *args, **kwargs):
+        super(RegistrationForm, self).__init__(*args, **kwargs)
+        self.fields.keyOrder = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+
     def save(self, commit=True):
         user = super(RegistrationForm, self).save(commit=False)
         user.first_name = self.cleaned_data['first_name']
