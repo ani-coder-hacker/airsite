@@ -20,5 +20,4 @@ from tutorial import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('accounts.urls')),
-    url(r'^google2556ce291aa8e634.html/$', views.google, name='google_registration')
 ]
