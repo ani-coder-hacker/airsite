@@ -122,3 +122,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/profile'
+
+EMAIL_host = 'localhost'
+EMAIL_PORT = 1025
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
