@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/profile'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOTS_USER = 'airsiteteam@gmail.com'
+EMAIL_HOTS_USER = 'airsiteteam02@gmail.com'
 EMAIL_HOST_PASSWORD = 'Always@Snape7'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
