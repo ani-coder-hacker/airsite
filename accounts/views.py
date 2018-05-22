@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm, PasswordResetForm
 from accounts.forms import RegistrationForm, EditProfileForm
@@ -5,7 +6,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import update_session_auth_hash
 
 
+
 # Create your views here.
+
 
 
 def home(request):
@@ -16,7 +19,10 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/account/profile')
+            return redirect('/profile')
+        else:
+            redirect('/register')
+            return HttpResponse("Please recheck the credentials that you filled in.")
     else:
         form = RegistrationForm()
 

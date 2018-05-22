@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'tutorial.middleware.LoginRequiredMiddleware'
 ]
 
 ROOT_URLCONF = 'tutorial.urls'
@@ -121,9 +122,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/profile'
+LOGIN_URL = '/login'
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOTS_USER = 'airsiteteam02@gmail.com'
-EMAIL_HOST_PASSWORD = 'Always@Snape7'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+LOGIN_EXEMPT_URLS = {
+    r'^register/',
+    r'^$'
+}
